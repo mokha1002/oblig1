@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+  <script src="javascript.js"></script>
+</head>
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+<label for="bestilling">Velg film:</label>
+<select id="bestilling" onchange="VelgFilm();">
+  <option>Velg her</option>
+  <option value="1">Harry Potter og de vises stein</option>
+  <option value="2">Ringenes herre: Ringens brorskap</option>
+  <option value="3">Avatar</option>
+</select>
+<br><br>
+
+<div>
+  <form action="">
+  <label for="antall">Antall</label>
+  <input type="text" id="antall" pattern="[1-9][0-9]*" title="Skriv inn antall" onchange="">
+  </form>
+</div>
+<br>
+
+<div>
+  <form action="">
+    <label for="fornavn">Fornavn</label>
+    <input type="text" id="fornavn" pattern="[A-Za-z]" title="Skriv inn fornavn" onchange="">
+  </form>
+</div>
+<br>
+
+<div>
+  <form action="">
+    <label for="etternavn">Etternavn</label>
+    <input type="text" id="etternavn" pattern="[A-Za-z]" title="Skriv inn etternavn" onchange="">
+  </form>
+</div>
+<br>
+
+<div>
+  <form action="">
+    <label for="telefonnr">Telefonnr</label>
+    <input type="text" id="telefonnr" pattern="[1-9][0-9]{8}" required title="Skriv inn Telefonnummer" onchange="">
+  </form>
+</div>
+<br>
+
+<div>
+  <form action="">
+    <label for="epost">Epost</label>
+    <input type="text" id="epost" pattern=".+@.+" required title="Skriv inn epost" onchange="">
+  </form>
+</div>
+<br>
+
+<button type="button" onclick="leggTiliArray()">Kjøp billett</button>
+<br>
+
+<h2>Alle billetter</h2>
+<ul id="utskriftFilmArray"></ul>
+<br>
+
+<button type="button" onclick="slettArray()">Slett alle billetter</button>
+</body>
+</html>
