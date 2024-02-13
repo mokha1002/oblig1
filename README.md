@@ -1,1 +1,5 @@
-# oblig1
+# Oblig 1
+
+OsloMet brukernavn: mokha1002
+
+GitHub brukernavn: alikhannpc
