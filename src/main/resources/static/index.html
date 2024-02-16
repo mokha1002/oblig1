@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Kinobilletter</title>
-
+  <script src="javascript.js"></script>
 </head>
 <body>
 <h1>Bestilling av kinobilletter</h1>
 <label for="bestilling">Velg film:</label>
 <select id="bestilling">
-  <option>Velg her</option>
-  <option value="1">Harry Potter og de vises stein</option>
-  <option value="2">Ringenes herre: Ringens brorskap</option>
-  <option value="3">Avatar</option>
+  <option selected disabled>Velg her</option>
+  <option id="film1">Harry Potter og de vises stein</option>
+  <option id="film2">Ringenes herre: Ringens brorskap</option>
+  <option id="film3">Avatar</option>
 </select>
 <br><br>
 
@@ -67,8 +67,8 @@
 <h2>Alle billetter</h2>
 <ul id="utskriftFilmArray"></ul>
 
-<button type="button" onclick="slettArray()">Slett alle billetter</button>
+<button type="button" id="slettBilletter" onclick="slettArray()">Slett alle billetter</button>
 
-<script src="javascript.js"></script>
+
 </body>
 </html>
