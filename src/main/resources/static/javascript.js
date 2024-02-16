@@ -1,5 +1,4 @@
-
-let billettArray= [];
+let billettArray = [];
 
 function billettLagring() {
     film = document.getElementById("bestilling").value;
@@ -15,17 +14,15 @@ function billettLagring() {
     let fornavnValidering = fornavn !== "";
     let etternavnValidering = etternavn !== "";
     let telefonnrValidering = telefonnr !== "" && !isNaN(telefonnr) && telefonnr.length === 8;
-    let epostpattern =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    let epostpattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     let epostValidering = epostpattern.test(epost);
 
 
-    if(antallValidering && fornavnValidering && etternavnValidering && telefonnrValidering && epostValidering){
+    if (antallValidering && fornavnValidering && etternavnValidering && telefonnrValidering && epostValidering) {
         leggTilIArrayet();
         skrivUtBilletter();
         tommeInputfelt();
-    }
-
-    else{
+    } else {
         if (antall === "") {
             document.getElementById("feilAntall").innerText = "Skriv inn antallet billetter";
         } else if (antallValidering === false) {
@@ -53,16 +50,14 @@ function billettLagring() {
         }
         if (epost === "") {
             document.getElementById("feilEpost").innerText = "Skriv inn eposten";
-        }
-        else if (!epostValidering){
+        } else if (!epostValidering) {
             document.getElementById("feilEpost").innerText = "Dette er en ugyldig epost";
-        }
-        else {
+        } else {
             document.getElementById("feilEpost").innerText = "";
         }
     }
 
-    function nullstillFeilmeldinger(){
+    function nullstillFeilmeldinger() {
         document.getElementById("feilAntall").innerText = "";
         document.getElementById("feilAntall").style.color = "red";
         document.getElementById("feilFornavn").innerText = "";
@@ -76,7 +71,7 @@ function billettLagring() {
     }
 
 
-    function leggTilIArrayet(){
+    function leggTilIArrayet() {
         let nyBestilling = {
             film: film,
             antall: antall,
@@ -87,14 +82,16 @@ function billettLagring() {
         }
         billettArray.push(nyBestilling)
     }
+
     function tommeInputfelt() {
-        document.getElementById("bestilling").value = "";
+        document.getElementById("bestilling").val;
         document.getElementById("antall").value = "";
         document.getElementById("fornavn").value = "";
         document.getElementById("etternavn").value = "";
         document.getElementById("telefonnr").value = "";
         document.getElementById("epost").value = "";
     }
+
     function skrivUtBilletter() {
         let utskrift = "";
         for (let i = 0; i < billettArray.length; i++) {
@@ -102,13 +99,21 @@ function billettLagring() {
             utskrift += `Film: ${billett.film}, Antall: ${billett.antall}, Fornavn: ${billett.fornavn}, Etternavn: ${billett.etternavn}, Telefonnr: ${billett.telefonnr}, Epost: ${billett.epost}<br>`;
         }
         document.getElementById("utskriftFilmArray").innerHTML = utskrift;
+        console.log(utskrift)
     }
-
-    function slettArray(){
-        billettArray.splice(0, billettArray.length);
-        skrivUtBilletter();
-    }
-
 }
 
+function slettArray() {
+    billettArray.splice(0, billettArray.length);
 
+    function slettBilletter() {
+        let utskrif = "";
+        for (let i = 0; i < billettArray.length; i++) {
+            let billett = billettArray[i];
+            utskrif += `Film: ${billett.film}, Antall: ${billett.antall}, Fornavn: ${billett.fornavn}, Etternavn: ${billett.etternavn}, Telefonnr: ${billett.telefonnr}, Epost: ${billett.epost}<br>`;
+        }
+        document.getElementById("utskriftFilmArray").innerHTML = utskrif;
+        console.log(utskrif)
+    }
+    slettBilletter();
+}
