@@ -1,12 +1,12 @@
 let billettArray = [];
 
 function billettLagring() {
-    film = document.getElementById("bestilling").value;
-    antall = document.getElementById("antall").value;
-    fornavn = document.getElementById("fornavn").value;
-    etternavn = document.getElementById("etternavn").value;
-    telefonnr = document.getElementById("telefonnr").value;
-    epost = document.getElementById("epost").value;
+    let film = document.getElementById("bestilling").value;
+    let antall = document.getElementById("antall").value;
+    let fornavn = document.getElementById("fornavn").value;
+    let etternavn = document.getElementById("etternavn").value;
+    let telefonnr = document.getElementById("telefonnr").value;
+    let epost = document.getElementById("epost").value;
 
     nullstillFeilmeldinger();
 
@@ -107,13 +107,13 @@ function slettArray() {
     billettArray.splice(0, billettArray.length);
 
     function slettBilletter() {
-        let utskrif = "";
+        let utskriftSlettaArray = "";
         for (let i = 0; i < billettArray.length; i++) {
             let billett = billettArray[i];
             utskrif += `Film: ${billett.film}, Antall: ${billett.antall}, Fornavn: ${billett.fornavn}, Etternavn: ${billett.etternavn}, Telefonnr: ${billett.telefonnr}, Epost: ${billett.epost}<br>`;
         }
-        document.getElementById("utskriftFilmArray").innerHTML = utskrif;
-        console.log(utskrif)
+        document.getElementById("utskriftFilmArray").innerHTML = utskriftSlettaArray;
+        console.log(utskriftSlettaArray)
     }
     slettBilletter();
 }
