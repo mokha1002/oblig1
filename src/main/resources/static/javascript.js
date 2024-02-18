@@ -122,7 +122,6 @@ function slettArray() {
             let billett = billettArray[i];
             // Legger til hver billetts informasjon til en streng
             utskriftSlettaArray += "Film: " + billett.film + ", Antall: " + billett.antall + ", Fornavn: " + billett.fornavn + ", Etternavn: " + billett.etternavn + ", Telefonnr: " + billett.telefonnr + ", Epost: " + billett.epost + "<br>";
-
         }
         // Skriver ut strengen på nettsiden
         document.getElementById("utskriftFilmArray").innerHTML = utskriftSlettaArray;

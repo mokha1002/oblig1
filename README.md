@@ -4,7 +4,7 @@ OsloMet brukernavn: mokha1002
 
 GitHub brukernavn: alikhannpc
 
-URL:
+URL: https://github.com/mokha1002/oblig1.git
 
 # Billettbestillingsside
 
