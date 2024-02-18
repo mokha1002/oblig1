@@ -2,7 +2,7 @@
 
 OsloMet brukernavn: mokha1002
 
-GitHub brukernavn: alikhannpc
+GitHub brukernavn: mokha1002
 
 URL: https://github.com/mokha1002/oblig1.git
 
