@@ -19,7 +19,7 @@ function billettLagring() {
     let fornavnValidering = fornavn !== "";
     let etternavnValidering = etternavn !== "";
     let telefonnrValidering = telefonnr !== "" && !isNaN(telefonnr) && telefonnr.length === 8;
-    let epostpattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // epostvalidering fra: https://emaillistvalidation.com/blog/email-validation-in-javascript-using-regular-expressions-the-ultimate-guide/
+    let epostpattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // epostvalidering fra: https://www.geeksforgeeks.org/javascript-program-to-validate-an-email-address/
     let epostValidering = epostpattern.test(epost);
 
     // Hvis all input er gyldig, legg til i array, ellers vis feilmeldinger, vi kan gjøre dette på grunn av at de
