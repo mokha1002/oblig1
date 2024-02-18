@@ -16,49 +16,39 @@
 </select>
 <br><br>
 
-<div>
   <form action="">
   <label for="antall">Antall</label>
   <input type="text" id="antall" pattern="[1-9][0-9]*" required title="Skriv inn antall">
     <span id="feilAntall"></span>
   </form>
-</div>
 <br>
 
-<div>
   <form action="">
     <label for="fornavn">Fornavn</label>
     <input type="text" id="fornavn" pattern="[A-Za-z]" required title="Skriv inn fornavn">
     <span id="feilFornavn"></span>
   </form>
-</div>
 <br>
 
-<div>
   <form action="">
     <label for="etternavn">Etternavn</label>
     <input type="text" id="etternavn" pattern="[A-Za-z]" required title="Skriv inn etternavn">
     <span id="feilEtternavn"></span>
   </form>
-</div>
 <br>
 
-<div>
   <form action="">
     <label for="telefonnr">Telefonnr</label>
     <input type="text" id="telefonnr" pattern="[1-9][0-9]{8}" required title="Skriv inn Telefonnummer">
     <span id="feilTlf"></span>
   </form>
-</div>
 <br>
 
-<div>
   <form action="">
     <label for="epost">Epost</label>
     <input type="text" id="epost" pattern=".+@.+" required title="Skriv inn epost">
     <span id="feilEpost"></span>
   </form>
-</div>
 <br>
 
 <button type="button" onclick="billettLagring()">Kjøp billett</button>
@@ -68,7 +58,6 @@
 <ul id="utskriftFilmArray"></ul>
 
 <button type="button" id="slettBilletter" onclick="slettArray()">Slett alle billetter</button>
-
 
 </body>
 </html>
